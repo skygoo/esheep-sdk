@@ -8,7 +8,7 @@ port = '5322'
 
 
 def run():
-    env = GameEnvironment(ip=ip, port=port, api_token="test", need_human_ob=True)
+    env = GameEnvironment(ip=ip, port=port, api_token="test")
     roomid, state = env.create_room("123")
     print("roomid:" + str(roomid))
     print("state:" + str(state))
@@ -20,19 +20,19 @@ def run():
         location, \
         immutable_element, \
         mutable_element, \
+        body, \
         bodies, \
         asset_ownership, \
         self_asset, \
         self_status, \
         pointer, \
-        human, \
         score, \
         kill, \
         health = env.get_observation_with_info()
         print("frame:"+str(frame))
         if state == 1:
-            if human is not None:
-                env.show_image(human, 200, 400)
+            # if human is not None:
+            #     env.show_image(human, 200, 400)
             print('in_game')
             action_choose = move[random.randint(0, 3)]
             env.submit_action(frame, action_choose, None, None, None)
