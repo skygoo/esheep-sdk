@@ -218,7 +218,7 @@ class RefreshObservation(threading.Thread):
                 pointer = to_np_array(layered_observation.pointer)
                 human = None
                 if self.need_human_ob:
-                    human = to_np_array(response.humanObservation)
+                    human = to_np_array(response.human_observation)
 
                 """write"""
                 observation_lock.acquire_write()
