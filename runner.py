@@ -4,8 +4,8 @@
 # FileName: runner.py
 
 
-import experiment as runner
-
+import sk68.dqn.experiment as runner
+from esheep_env.game_env import GameEnvironment
 if __name__ == '__main__':
-    runner.train()
+    runner.train(GameEnvironment)
     # runner.test(render=True)

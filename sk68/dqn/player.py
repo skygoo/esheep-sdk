@@ -4,7 +4,7 @@
 # FileName: player.py
 
 import numpy as np
-from config import *
+from sk68.dqn.config import *
 import random
 import logging
 from mxnet import init, nd, autograd, gluon

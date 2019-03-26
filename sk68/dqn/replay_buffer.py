@@ -15,7 +15,7 @@ import time
 
 floatX = 'float32'
 
-from config import DISCOUNT, PHI_LENGTH
+from sk68.dqn.config import DISCOUNT, PHI_LENGTH
 
 
 class ReplayBuffer(object):

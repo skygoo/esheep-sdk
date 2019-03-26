@@ -6,9 +6,9 @@
 import numpy as np
 from mxnet import init, nd, autograd, gluon
 from mxnet.gluon import nn
-import g_utils
-from config import *
-from multi_layer import MultiLayer
+import sk68.dqn.g_utils
+from sk68.dqn.config import *
+from sk68.dqn.multi_layer import MultiLayer
 
 
 class D3QLearning(object):

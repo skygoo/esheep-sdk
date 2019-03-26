@@ -7,18 +7,18 @@
 import numpy as np
 
 # from src.dqn.player_priority import Player
-from player import Player
+from sk68.dqn.player import Player
 # from game_env import GameEnv
-from esheep_env.game_env import GameEnvironment
+
 # from src.dqn.replay_buffer import ReplayBuffer
 # from priority_experience_replay import PriorityReplayBuffer
-from replay_buffer import ReplayBuffer
-from d3qn import D3QLearning
+from sk68.dqn.replay_buffer import ReplayBuffer
+from sk68.dqn.d3qn import D3QLearning
 
-import g_utils
+import sk68.dqn.g_utils
 import mxnet as mx
 import mxnet as nd
-import ztutils
+import sk68.dqn.ztutils
 
 from config import *
 
@@ -33,7 +33,7 @@ class Experiment(object):
     mx.random.seed(RANDOM_SEED)
     rng = np.random.RandomState(RANDOM_SEED)
 
-    def __init__(self, testing=False):
+    def __init__(self, game_env, testing=False):
         ztutils.mkdir_if_not_exist(MODEL_PATH)
         self.step_count = 0
         self.episode_count = 0
@@ -45,7 +45,7 @@ class Experiment(object):
                                            model_file=PRE_TRAIN_MODEL_FILE
                                            )
 
-        self.game = GameEnvironment(ip=ip, port=port, api_token="test")
+        self.game = game_env(ip=ip, port=port, api_token="test")
 
         self.player = Player(self.game,
                              self.q_learning,
@@ -148,9 +148,9 @@ class Experiment(object):
             self.q_learning.save_params_to_file(MODEL_PATH, MODEL_FILE_MARK + BEGIN_TIME)
 
 
-def train():
+def train(env):
     print(' ====================== START TRAIN ========================')
-    exper = Experiment()
+    exper = Experiment(env)
     exper.start_train()
 
 
