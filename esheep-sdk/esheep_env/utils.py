@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def to_np_array(image_data, dtype=np.int8):
+def to_np_array(image_data, dtype=np.uint8):
     width = image_data.width
     height = image_data.height
     pixel_length = image_data.pixel_length

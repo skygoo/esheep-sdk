@@ -99,6 +99,7 @@ class GameEnvironment:
         location = location_observation
         immutable_element = immutable_element_observation
         mutable_element = mutable_element_observation
+        body = body_observation
         bodies = bodies_observation
         asset_ownership = asset_ownership_observation
         self_asset = self_asset_observation
@@ -123,6 +124,7 @@ class GameEnvironment:
                    location, \
                    immutable_element, \
                    mutable_element, \
+                   body, \
                    bodies, \
                    asset_ownership, \
                    self_asset, \
@@ -139,6 +141,7 @@ class GameEnvironment:
                    location, \
                    immutable_element, \
                    mutable_element, \
+                   body, \
                    bodies, \
                    asset_ownership, \
                    self_asset, \
@@ -188,7 +191,7 @@ class RefreshObservation(threading.Thread):
 
     def run(self):
         global frame_index, human_observation, location_observation, \
-            immutable_element_observation, mutable_element_observation, bodies_observation, \
+            immutable_element_observation, mutable_element_observation, body_observation, bodies_observation, \
             asset_ownership_observation, self_asset_observation, self_status_observation,\
             pointer_observation, observation_state, score_inform, kill_inform, heath_inform
 
@@ -211,6 +214,7 @@ class RefreshObservation(threading.Thread):
                 location = to_np_array(layered_observation.location)
                 immutable_element = to_np_array(layered_observation.immutable_element)
                 mutable_element = to_np_array(layered_observation.mutable_element)
+                body = to_np_array(layered_observation.body)
                 bodies = to_np_array(layered_observation.bodies)
                 asset_ownership = to_np_array(layered_observation.asset_ownership)
                 self_asset = to_np_array(layered_observation.self_asset)
@@ -226,6 +230,7 @@ class RefreshObservation(threading.Thread):
                 location_observation = location
                 immutable_element_observation = immutable_element
                 mutable_element_observation = mutable_element
+                body_observation = body
                 bodies_observation = bodies
                 asset_ownership_observation = asset_ownership
                 self_asset_observation = self_asset
