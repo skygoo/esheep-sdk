@@ -13,6 +13,7 @@ human_observation = None
 location_observation = None
 immutable_element_observation = None
 mutable_element_observation = None
+body_observation = None
 bodies_observation = None
 asset_ownership_observation = None
 self_asset_observation = None
