@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='org.seekloud.esheepapi.pb',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x12observations.proto\x12\x19org.seekloud.esheepapi.pb\"\xdd\x03\n\x12LayeredObservation\x12\x34\n\x08location\x18\x01 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12=\n\x11immutable_element\x18\x02 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12;\n\x0fmutable_element\x18\x03 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x32\n\x06\x62odies\x18\x04 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12;\n\x0f\x61sset_ownership\x18\x05 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x36\n\nself_asset\x18\x06 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x37\n\x0bself_status\x18\x07 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x33\n\x07pointer\x18\x08 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\"L\n\x07ImgData\x12\r\n\x05width\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x05\x12\x14\n\x0cpixel_length\x18\x03 \x01(\x05\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\x62\x06proto3')
+  serialized_pb=_b('\n\x12observations.proto\x12\x19org.seekloud.esheepapi.pb\"\x8f\x04\n\x12LayeredObservation\x12\x34\n\x08location\x18\x01 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12=\n\x11immutable_element\x18\x02 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12;\n\x0fmutable_element\x18\x03 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x30\n\x04\x62ody\x18\x04 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x32\n\x06\x62odies\x18\x05 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12;\n\x0f\x61sset_ownership\x18\x06 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x36\n\nself_asset\x18\x07 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x33\n\x07pointer\x18\x08 \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\x12\x37\n\x0bself_status\x18\t \x01(\x0b\x32\".org.seekloud.esheepapi.pb.ImgData\"L\n\x07ImgData\x12\r\n\x05width\x18\x01 \x01(\x05\x12\x0e\n\x06height\x18\x02 \x01(\x05\x12\x14\n\x0cpixel_length\x18\x03 \x01(\x05\x12\x0c\n\x04\x64\x61ta\x18\x04 \x01(\x0c\x62\x06proto3')
 )
 
 
@@ -54,28 +54,28 @@ _LAYEREDOBSERVATION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='bodies', full_name='org.seekloud.esheepapi.pb.LayeredObservation.bodies', index=3,
+      name='body', full_name='org.seekloud.esheepapi.pb.LayeredObservation.body', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='asset_ownership', full_name='org.seekloud.esheepapi.pb.LayeredObservation.asset_ownership', index=4,
+      name='bodies', full_name='org.seekloud.esheepapi.pb.LayeredObservation.bodies', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='self_asset', full_name='org.seekloud.esheepapi.pb.LayeredObservation.self_asset', index=5,
+      name='asset_ownership', full_name='org.seekloud.esheepapi.pb.LayeredObservation.asset_ownership', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='self_status', full_name='org.seekloud.esheepapi.pb.LayeredObservation.self_status', index=6,
+      name='self_asset', full_name='org.seekloud.esheepapi.pb.LayeredObservation.self_asset', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -84,6 +84,13 @@ _LAYEREDOBSERVATION = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='pointer', full_name='org.seekloud.esheepapi.pb.LayeredObservation.pointer', index=7,
       number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='self_status', full_name='org.seekloud.esheepapi.pb.LayeredObservation.self_status', index=8,
+      number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -101,7 +108,7 @@ _LAYEREDOBSERVATION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=50,
-  serialized_end=527,
+  serialized_end=577,
 )
 
 
@@ -152,18 +159,19 @@ _IMGDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=529,
-  serialized_end=605,
+  serialized_start=579,
+  serialized_end=655,
 )
 
 _LAYEREDOBSERVATION.fields_by_name['location'].message_type = _IMGDATA
 _LAYEREDOBSERVATION.fields_by_name['immutable_element'].message_type = _IMGDATA
 _LAYEREDOBSERVATION.fields_by_name['mutable_element'].message_type = _IMGDATA
+_LAYEREDOBSERVATION.fields_by_name['body'].message_type = _IMGDATA
 _LAYEREDOBSERVATION.fields_by_name['bodies'].message_type = _IMGDATA
 _LAYEREDOBSERVATION.fields_by_name['asset_ownership'].message_type = _IMGDATA
 _LAYEREDOBSERVATION.fields_by_name['self_asset'].message_type = _IMGDATA
-_LAYEREDOBSERVATION.fields_by_name['self_status'].message_type = _IMGDATA
 _LAYEREDOBSERVATION.fields_by_name['pointer'].message_type = _IMGDATA
+_LAYEREDOBSERVATION.fields_by_name['self_status'].message_type = _IMGDATA
 DESCRIPTOR.message_types_by_name['LayeredObservation'] = _LAYEREDOBSERVATION
 DESCRIPTOR.message_types_by_name['ImgData'] = _IMGDATA
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
