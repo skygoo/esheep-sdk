@@ -41,7 +41,20 @@ class Player(object):
                 time.sleep(0.5)
                 self.game.submit_reincarnation()
                 time.sleep(0.5)
-                _, state, _, _, _, _, _, _, _, _, _, _, _ = self.game.get_observation_with_info()
+                frame, \
+                state, \
+                location, \
+                immutable_element, \
+                mutable_element, \
+                body, \
+                bodies, \
+                asset_ownership, \
+                self_asset, \
+                self_status, \
+                pointer, \
+                score, \
+                kill, \
+                health = self.game.get_observation_with_info()
                 if state == api.in_game:
                     need_start = False
             frame, \
@@ -49,6 +62,7 @@ class Player(object):
             location, \
             immutable_element, \
             mutable_element, \
+            body,\
             bodies, \
             asset_ownership, \
             self_asset, \
@@ -70,7 +84,7 @@ class Player(object):
             if action == 0:
                 self.game.submit_action(frame, None, None, None, None)
             else:
-                move = self.move[int(action-1)]
+                move = self.move[int(action - 1)]
                 self.game.submit_action(frame, move, None, None, None)
             reward = 0.1
             if score > self.last_score:
@@ -97,7 +111,7 @@ class Player(object):
                 train_count += 1
 
         return episode_step, episode_reword, episode_score, loss_sum / (train_count + 0.0000001), q_sum / (
-                    q_count + 0.0000001)
+                q_count + 0.0000001)
 
     def _choose_action(self, img, replay_buffer, testing, random_action):
         self.epsilon = max(self.epsilon_min, self.epsilon - self.epsilon_rate)
@@ -110,7 +124,6 @@ class Player(object):
             phi = replay_buffer.phi(img)
             action, max_q = self.q_learning.choose_action(phi, self.epsilon)
         return action, max_q
-
 
 
 if __name__ == '__main__':

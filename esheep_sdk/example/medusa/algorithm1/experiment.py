@@ -34,7 +34,7 @@ class Experiment(object):
                                     is_dueling=IS_DUELING,
                                     )
         ip = '127.0.0.1'
-        port = '5321'
+        port = '41640'
         self.game = GameEnvironment(ip=ip, port=port, api_token="test")
 
         self.player = Player(self.game,
