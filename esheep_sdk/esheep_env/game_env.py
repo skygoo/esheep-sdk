@@ -2,7 +2,7 @@ from esheep_sdk.esheep_env.grpc_client import GrpcClient
 import threading
 from esheep_sdk.esheep_env.utils import to_np_array
 from esheep_sdk.esheep_env.rw_lock import RWLock
-import esheep_sdk.protos.gen_py.api_pb2 as messages
+import esheep_sdk.protos.genpy.api_pb2 as messages
 import matplotlib.pyplot as plt
 import numpy as np
 

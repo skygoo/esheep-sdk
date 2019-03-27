@@ -14,7 +14,7 @@ import numpy as np
 
 floatX = 'float32'
 
-from example.medusa.algorithm1.config import PHI_LENGTH
+from esheep_sdk.example.medusa.algorithm1.config import PHI_LENGTH
 
 
 class ReplayBuffer(object):

@@ -5,9 +5,9 @@
 
 import numpy as np
 from mxnet import init, nd, autograd, gluon
-import example.medusa.algorithm1.dueling_dqn as dueling_dqn
-import example.medusa.algorithm1.utils as g_utils
-from example.medusa.algorithm1.config import *
+import esheep_sdk.example.medusa.algorithm1.dueling_dqn as dueling_dqn
+import esheep_sdk.example.medusa.algorithm1.utils as g_utils
+from esheep_sdk.example.medusa.algorithm1.config import *
 
 
 class QLearning(object):

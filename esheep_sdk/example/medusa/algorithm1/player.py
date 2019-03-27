@@ -3,9 +3,9 @@
 # Time  : 12:22 PM
 # FileName: player.py
 
-import api_pb2 as api
+import esheep_sdk.protos.genpy.api_pb2 as api
 import numpy as np
-from example.medusa.algorithm1.config import *
+from esheep_sdk.example.medusa.algorithm1.config import *
 
 
 class Player(object):

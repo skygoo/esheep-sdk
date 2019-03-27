@@ -1,6 +1,6 @@
 from mxnet import nd
 from mxnet.gluon import nn
-from example.medusa.algorithm1.config import *
+from esheep_sdk.example.medusa.algorithm1.config import *
 
 
 class DuelingDQN(nn.Sequential):

@@ -5,15 +5,15 @@
 
 
 import numpy as np
-from example.medusa.algorithm1.player import Player
-from game_env import GameEnvironment
-from example.medusa.algorithm1.replay_buffer import ReplayBuffer
-from example.medusa.algorithm1.q_learning import QLearning
-from example.medusa.algorithm1 import utils
+from esheep_sdk.example.medusa.algorithm1.player import Player
+from esheep_sdk.esheep_env.game_env import GameEnvironment
+from esheep_sdk.example.medusa.algorithm1.replay_buffer import ReplayBuffer
+from esheep_sdk.example.medusa.algorithm1.q_learning import QLearning
+from esheep_sdk.example.medusa.algorithm1 import utils
 import mxnet as mx
 from mxnet import nd
-import example.medusa.algorithm1.ztutils as ztutils
-from example.medusa.algorithm1.config import *
+import esheep_sdk.example.medusa.algorithm1.ztutils as ztutils
+from esheep_sdk.example.medusa.algorithm1.config import *
 
 
 class Experiment(object):

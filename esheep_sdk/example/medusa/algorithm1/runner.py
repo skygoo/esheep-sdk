@@ -4,7 +4,7 @@
 # FileName: runner.py
 
 
-import example.medusa.algorithm1.experiment as runner
+import esheep_sdk.example.medusa.algorithm1.experiment as runner
 
 if __name__ == '__main__':
     runner.train()

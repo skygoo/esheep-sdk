@@ -1,5 +1,5 @@
 import time
-from game_env import GameEnvironment
+from esheep_sdk.esheep_env.game_env import GameEnvironment
 import random
 
 

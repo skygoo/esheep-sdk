@@ -1,8 +1,8 @@
 import sys
 import datetime
 import grpc
-import esheep_sdk.protos.gen_py.service_pb2_grpc as service
-import esheep_sdk.protos.gen_py.api_pb2 as messages
+import esheep_sdk.protos.genpy.service_pb2_grpc as service
+import esheep_sdk.protos.genpy.api_pb2 as messages
 import time
 
 
