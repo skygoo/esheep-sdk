@@ -75,8 +75,7 @@ class Player(object):
                 time.sleep(0.01)
                 continue
             self.last_frame = frame
-            st = np.concatenate((location, immutable_element, mutable_element, bodies,
-                                 asset_ownership, self_asset, self_status), axis=-1)
+            st = np.concatenate((location, immutable_element, mutable_element, bodies), axis=-1)
             action, max_q = self._choose_action(st, replay_buffer, testing, random_action)
             if max_q is not None:
                 q_count += 1
