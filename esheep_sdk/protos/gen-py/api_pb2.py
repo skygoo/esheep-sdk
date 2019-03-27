@@ -13,8 +13,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import esheep_sdk.protos.gen_py.actions_pb2 as actions__pb2
-import esheep_sdk.protos.gen_py.observations_pb2 as observations__pb2
+import actions_pb2 as actions__pb2
+import observations_pb2 as observations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

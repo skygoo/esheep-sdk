@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='org.seekloud.esheepapi.pb',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\ractions.proto\x12\x19org.seekloud.esheepapi.pb\")\n\x05Swing\x12\x0e\n\x06radian\x18\x01 \x01(\x02\x12\x10\n\x08\x64istance\x18\x02 \x01(\x02*Y\n\x04Move\x12\x06\n\x02up\x10\x00\x12\x08\n\x04\x64own\x10\x01\x12\x08\n\x04left\x10\x02\x12\t\n\x05right\x10\x03\x12\x08\n\x04l_up\x10\x04\x12\x08\n\x04r_up\x10\x05\x12\n\n\x06l_down\x10\x06\x12\n\n\x06r_down\x10\x07\x62\x06proto3')
+  serialized_pb=_b('\n\ractions.proto\x12\x19org.seekloud.esheepapi.pb\")\n\x05Swing\x12\x0e\n\x06radian\x18\x01 \x01(\x02\x12\x10\n\x08\x64istance\x18\x02 \x01(\x02*c\n\x04Move\x12\x06\n\x02up\x10\x00\x12\x08\n\x04\x64own\x10\x01\x12\x08\n\x04left\x10\x02\x12\t\n\x05right\x10\x03\x12\x08\n\x04l_up\x10\x04\x12\x08\n\x04r_up\x10\x05\x12\n\n\x06l_down\x10\x06\x12\n\n\x06r_down\x10\x07\x12\x08\n\x04noop\x10\x08\x62\x06proto3')
 )
 
 _MOVE = _descriptor.EnumDescriptor(
@@ -61,11 +61,15 @@ _MOVE = _descriptor.EnumDescriptor(
       name='r_down', index=7, number=7,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='noop', index=8, number=8,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=87,
-  serialized_end=176,
+  serialized_end=186,
 )
 _sym_db.RegisterEnumDescriptor(_MOVE)
 
@@ -78,6 +82,7 @@ l_up = 4
 r_up = 5
 l_down = 6
 r_down = 7
+noop = 8
 
 
 

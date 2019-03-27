@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import esheep_sdk.protos.gen_py.api_pb2 as api__pb2
+import api_pb2 as api__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
